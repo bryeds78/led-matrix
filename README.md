@@ -20,3 +20,5 @@ For the messages, I found quotes and things I like. It's just a txt file with a 
 Side note: I am running this on a rPi Zerow - when temp.py runs to check the FTP and process, it does slow it down for a couple of seconds. If you use a higher powered rpi, it should work better. 
   
 I will likely update this with more information and details, but I wanted to get this out for anyone interested. I also give credit to those who made the original code I used to make this happen. I was going through a TON of online resources so I don't know who it all was, but I do know for sure it was the people who made silly_clock.py that really helped. It was hard to get these LEDs working right! I'll the appropriate credit when I can find the sources - I have extensive side notes as I didn't want to have to figure it all out again after i killed it accidentally once and had to go back and figure it all out.
+
+  I also added cryptofile.py to the repository, it scrapes coinmarketcap.com for the proces of specified crypto and saves to a txt file that you can integrate into myclock.py
