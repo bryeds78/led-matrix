@@ -23,4 +23,35 @@ I will likely update this with more information and details, but I wanted to get
 
   I also added cryptofile.py to the repository, it scrapes coinmarketcap.com for the proces of specified crypto and saves to a txt file that you can integrate into myclock.py
 
-Last note for now. I apologize for the not so professional code! I am in IT and can script, build websites, etc, but python is new and I have barely any formal programming training, I certainly don't prescribe to any specific patterns or methods, but I do try to keep it clean. I was not writing and putting together this code with the thought of sharing it, so maybe I will go and update it if time permits, but it's pretty straight forward. Not a bad first time python project.
+I apologize for the not so professional code! I am in IT and can script, build websites, etc, but python is new and I have barely any formal programming training, I certainly don't prescribe to any specific patterns or methods, but I do try to keep it clean. I was not writing and putting together this code with the thought of sharing it, so maybe I will go and update it if time permits, but it's pretty straight forward. Not a bad first time python project.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Here are the raw notes and steps I used to get any prerequisites setup and running before I was able to execute this successfully.
+  
+  Turn on SSH & SPI from raspi-config
+Install and configure a FTP server (proftpd - install and then login with the admin creds)
+
+* sudo -H pip3 install --upgrade --force-reinstall --ignore-installed luma.core
+* sudo -H pip3 install --upgrade --force-reinstall --ignore-installed luma.led_matrix
+
+	sudo usermod -a -G spi,gpio pi
+	sudo apt install build-essential python3-dev python3-pip
+	sudo apt-get install git
+	sudo -H pip3 install --upgrade --ignore-installed pip3 setuptools
+	sudo apt install proftpd (login with rpi creds)
+	sudo -H pip3 install --upgrade --force-reinstall --ignore-installed luma.core
+	sudo -H pip3 install --upgrade --force-reinstall --ignore-installed pillow
+sudo apt-get install build-essential
+sudo apt-get install python-dev python-pip
+
+sudo pip install schedule, requests, bs4
+install pip requests
+install pip bs4
+
+sudo apt install build-essential python-dev python-pip
+sudo -H pip install --upgrade --ignore-installed pip setuptools
+sudo -H pip install --upgrade luma.led_matrix
+
+Use crontab method to start the script with the system:
+https://www.tomshardware.com/how-to/run-script-at-boot-raspberry-pi
